@@ -8,6 +8,9 @@ Thanks for checking out this front-end coding challenge.
 
 [Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
 
+## Live Demo
+👉 https://evija-berzina.github.io/frontendmentor-faq-accordion/
+
 **To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
 
 ## The challenge
