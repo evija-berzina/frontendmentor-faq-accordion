@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+:root {
+  --clr-white: 0 100% 100%;
+  --clr-purple-100: 275 100% 97%;
+  --clr-purple-600: 292 16% 49%;
+  --clr-purple-950: 292 42% 14%;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url(assets/images/background-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-color: hsl(var(--clr-purple-100));
+  
+  min-height: 100vh;
+  
+  font-size: 1rem;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  color: hsl(var(--clr-purple-600));
+}
+
+.main-container {
+  width: 325px;
+  background-color: hsl(var(--clr-white));
+  border-radius: 0.5rem;
+  padding-inline: 1.5rem;
+  padding-top: 2rem;
+  margin-block: 1rem;
+}
+
+.icon-and-title {
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.icon-star {
+  height: 25px;
+}
+
+.title {
+  color: hsl(var(--clr-purple-950));
+}
+
+.faq-container {
+  border-bottom: 2px solid hsl(var(--clr-purple-100));
+}
+
+.question-section {
+  justify-content: space-between;
+  align-items: center;
+  flex: stretch;
+  text-align: start;
+  padding-block: 1.25rem;
+  width: 100%;
+  border: none;
+  background-color: hsl(var(--clr-white));
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.question-section:focus-visible {
+  outline: none;
+}
+
+.question {
+  color: hsl(var(--clr-purple-950));
+  font-weight: 600;
+  transition: color 0.15s;
+}
+
+.question:hover {
+  color: hsl(284, 74%, 51%);
+}
+
+.question-section:focus-visible .question  {
+  color: hsl(284, 74%, 51%);
+}
+
+.answer {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding-bottom: 1.5rem;
+}
+
+.js-answer {
+  display: none;
+}
+
+.js-answer.visible {
+  display: block;
+}
+
+@media (min-width: 375px) {
+  body {
+    background-image: url(assets/images/background-pattern-desktop.svg);
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url(assets/images/background-pattern-desktop.svg);
+  }
+
+  .main-container {
+    width: 600px;
+  }
+
+  .icon-star {
+    height: 35px;
+  }
+
+  .title {
+    font-size: 2.75rem;
+    color: hsl(var(--clr-purple-950));
+  }
+
+  .question {
+    white-space: nowrap;
+    font-size: 0.9rem;
+  }
+
+  .answer {
+    font-size: 0.813rem;
+  }
+}
